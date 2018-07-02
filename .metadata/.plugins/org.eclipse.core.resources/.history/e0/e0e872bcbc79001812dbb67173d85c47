@@ -1,0 +1,17 @@
+package login.keshav.registration;
+
+public class CustomerDAOImpl implements CustomerDAO {
+
+	@Override
+	public int insertCustomer(Customer c) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Customer getCustomer(String username, String pass) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,45 @@
+package login.keshav.registration;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class CustomerDAOImpl implements CustomerDAO {
+
+	
+	static Connection con;
+	static PreparedStatement ps;
+	@Override
+	public int insertCustomer(Customer c) {
+		int status=0;
+		try {
+			con=MyConnectionProvider.getCon();
+			ps=con.prepareStatement("insert into customer values(?,?)");
+			ps.setString(1,c.getUsername());
+			ps.setString(1,c.getName());
+					
+			ps.setString(1,c.getPassword());
+			status=ps.excuteUpdate();
+			con.close();
+			
+			
+
+
+			
+			
+		}catch(Exception e) {
+			System.out.println();
+		}
+		return status;
+	}
+
+	@Override
+	public Customer getCustomer(String username, String pass) {
+try {
+			
+		}catch(Exception e) {
+			System.out.println();
+		}
+		return null;
+	}
+
+}
